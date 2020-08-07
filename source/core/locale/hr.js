@@ -3,7 +3,7 @@
  * Name : Croatian
  * Code : [none]
  * Tag  : hr
- * Translator: Dark_Knight, Tharacius
+ * Translator: Dark_Knight, Tharacius, HodajuciDjed
  */
 
 // Languages Object
@@ -12,7 +12,7 @@ var gca_languages = gca_languages || {};
 // Set Language
 gca_languages['hr'] = {
 	name : 'Hrvatski (Croatian)',
-	translators : ["Dark_Knight","Tharacius"],
+	translators : ["Dark_Knight","Tharacius","HodajuciDjed"],
 	locale : {
 		info : {
 			description : "Najluđi addon za Gladiatus ikada!"
@@ -40,14 +40,14 @@ gca_languages['hr'] = {
 			
 			// Life/Expedition/Dungeon points recovery
 			life_recover_full : "Životni bodovi će biti puni za",
-			expedition_recover_full : "Bodovi za ekspedicije će biti pune za",
-			dungeon_recover_full : "Bodovi za tamnice će biti pune za",
+			expedition_recover_full : "Bodovi za ekspedicije će biti puni za",
+			dungeon_recover_full : "Bodovi za tamnice će biti puni za",
 
 			// Button bar - Message
 			message_private_write : "Pošalji privatnu poruku",
 			message_guild_write : "Pošalji saveznu poruku",
 			message_send : "Pošalji",
-			message_sent_success : "Poruka uspešno poslata",
+			message_sent_success : "Poruka uspješno poslana",
 			message_sent_failed : "Greška pri slanju poruke",
 			message_empty : "Poruka je prazna",
 			message_exclude_me : "Isključi mene",
@@ -72,9 +72,9 @@ gca_languages['hr'] = {
 			family_friends : "Familija",
 
 			// Guild donate
-			donate_gold_confirm : "Da li ste sigurni da želite da donirate {{number}} zlata?",
-			donate_gold_success : "Zlato uspešno donirano",
-			donate_gold_failed : "Zlato neuspešno donirano",
+			donate_gold_confirm : "Da li ste sigurni da želite donirati {{number}} zlata?",
+			donate_gold_success : "Zlato uspješno donirano",
+			donate_gold_failed : "Zlato neuspješno donirano",
 			donate_gold_no_gold : "Nemate zlata da donirate",
 			donate_gold_all_gold : "Doniraj sve svoje zlato",
 
@@ -89,19 +89,23 @@ gca_languages['hr'] = {
 
 			// Notifications
 			notification_guild_application : "Ima nova savezna aplikacija na čekanju!",
+			notification_guild_attack_ready : "Vrijeme čekanja za napad na drugi savez je isteklo!",
 			low_durability_items : "Ima {{number}} predmeta sa održavanjem ispod {{percent}}%",
-			item_worth_rubies : "Taj predmet vredi rubina!",
+			item_worth_rubies : "Taj predmet vrijedi rubina!",
 
 			// Gold - Exp data
 			gold_exp_data : "Podaci o Zlatu i Iskustvu ",
 			gold_exp_data_today : "Zadnjih 24 sata",
 			gold_exp_data_week : "Zadnjih 7 dana",
-			gold_exp_data_avg_day : "Prosek po danu",
+			gold_exp_data_avg_day : "Prosjek po danu",
 			gold_exp_data_to_level_up : "Preostalo dana do sljedećeg levela",
 			gold_exp_data_package_tax : "Nedeljni gubitak zlata na pakiranje",
-			gold_exp_data_measurements : "Measurements",
+			gold_exp_data_measurements : "Mjerenja",
 			gold_exp_data_total_exp : "Ukupno iskustva",
 			gold_exp_data_total_gold : "Ukupno zlata",
+			
+			// Items
+			merchenary_type : "Tip: {{name}} ({{number}})",
 		},
 
 		// Overview
@@ -115,8 +119,8 @@ gca_languages['hr'] = {
 			// More player info
 			more_player_info : "Više informacija o igraču",
 			can_use_max_item_level : "Može koristiti predmete do {{max}} levela.",
-			can_see_market_max_item_level : "Može da vidi predmete na marketu do {{max}} levela.",
-			can_see_auction_item_levels : "Može da vidi predmete na aukciji od {{min}} do {{max}} levela."
+			can_see_market_max_item_level : "Može vidjeti predmete na marketu do {{max}} levela.",
+			can_see_auction_item_levels : "Može vidjeti predmete na aukciji od {{min}} do {{max}} levela."
 		},
 
 		// Pantheon section
@@ -133,7 +137,7 @@ gca_languages['hr'] = {
 			bank_all_gold : "Dodaj sve svoje zlato",
 
 			// Library
-			library_per_point_cost : "Cena po bodu temeljnog",
+			library_per_point_cost : "Cijena po bodu temeljnog",
 			library_gold_left : "Preostalo savezno zlato nakon aktivacije",
 
 			// Medic
@@ -150,30 +154,33 @@ gca_languages['hr'] = {
 		// Arena section
 		arena : {
 			global_arena_title : "Globalna Arena",
-			global_arena_description : "This is the ultimate arena, gathering gladiators from all around the world! In this arena, gladiators do not fight for gold or experience, they fight for a place on the world top list!",
-			global_arena_load : "Load enemies list",
-			global_highscore : "Global Highscore",
-			country : "Country",
+			global_arena_description : "Ovo je vrhunska arena koja okuplja gladijatore iz cijelog svijeta! U ovoj areni gladijatori se ne bore za zlato ili iskustvo, bore se za mjesto na svjetskoj top listi!",
+			global_arena_load : "Učitaj popis neprijatelja",
+			global_highscore : "Globalni Highscore",
+			country : "Zemlja",
 			server : "Server",
-			target_list : "Target List",
-			target_list_add : "Add to target list",
-			target_list_remove : "Remove from target list",
-			error_sth_went_wrong : "Something went wrong",
-			error_response : "Server responded with an error",
-			error_blocked_access : "Something blocks the access to GCA server ({{url}})",
-			error_connection : "Connection error",
-			attack_player : "Click to attack “{{name}}”",
-			fight_won : "You won the fight!",
-			fight_lost : "You lost the fight...",
-			player_tired : "You are tired. You need to rest."
+			target_list : "Lista Meta",
+			target_list_add : "Dodaj na listu meta",
+			target_list_remove : "Makni sa liste meta",
+			error_sth_went_wrong : "Nešto je pošlo po zlu",
+			error_response : "Poslužitelj je odgovorio pogreškom",
+			error_blocked_access : "Nešto blokira pristup GCA poslužitelju ({{url}})",
+			error_connection : "Greška u povezivanju",
+			attack_player : "Kliknite za napad “{{name}}”",
+			fight_won : "Pobijedili ste u borbi!",
+			fight_lost : "Izgubili ste borbu...",
+			player_tired : "Umoran si. Moraš se odmoriti.",
+			player1_hits_player2 : "{{name1}} udara {{name2}}",
+			player_takes_x_damage :"{{name}} prima {{number}} šete",
+			player_dies :"{{name}} umire"
 		},
 
 		// Training section
 		training : {
 			// Points analysis
-			stats_points : "Stats Points",
-			points_breakdown : "Points Breakdown",
-			stats_calculated_with_yourself_as_an_opponent : "* Stats are calculated with the concept of attacking yourself.",
+			stats_points : "Bodovi za treniranje",
+			points_breakdown : "Analiza bodova",
+			stats_calculated_with_yourself_as_an_opponent : "* Statistika se izračunava s konceptom napada na sebe.",
 			// Cost calculator
 			total_cost : "Ukupna cijena",
 			// Discount show
@@ -189,11 +196,17 @@ gca_languages['hr'] = {
 			// Number of items that have been bidden in the page
 			number_of_bided_items : "Broj ponuda na predmetima : {{number}}",
 			// Message on items that you can buy and sell at the same price
-			hide_your_gold_here : "Upakirajte zlato ovde",
+			hide_your_gold_here : "Upakirajte zlato ovdje",
 			// Price of item equals to its value
-			price_value_function : "Cena = Vrednost + {{number}}",
+			price_value_function : "Cijena = Vrijednost + {{number}}",
 			// Levels you can see
-			levels_you_can_see : "Možete videti predmete od {{min}} do {{max}} levela.",
+			levels_you_can_see : "Možete vidjeti predmete od {{min}} do {{max}} levela.",
+			// Sort
+			sort : "Sortiraj",
+			sort_by : "Sortiraj po",
+			sort_order : "Poredak",
+			asc : "Uspon",
+			desc : "Silaz"
 		},
 
 		// Markets section
@@ -203,7 +216,8 @@ gca_languages['hr'] = {
 			item_is_soulbound : "Ovaj predmet je povezan dušom.",
 			item_cant_buy_back : "Nećete moći otkupiti ovaj predmet nazad.",
 			// Are you sure
-			are_you_sure_you_want_to_buy : "Da li ste sigurni da želite da kupite ovaj predmet?"
+			are_you_sure_you_want_to_buy : "Da li ste sigurni da želite da kupite ovaj predmet?",
+			click_enter_to_sell : "pristisni enter ⏎ da bi prodao"
 		},
 		
 		// Forge
@@ -213,22 +227,38 @@ gca_languages['hr'] = {
 			show_hide_doll : "Prikaži/Sakrij opremu gladiatora"
 		},
 		
+		// Merchants
+		merchants : {
+			search_item_in_merchants : "Potraži predmet kod trgovca",
+			no_such_item : "Nije pronađen takav predmet."
+		},
+		
 		// Packages
 		packages : {
 			event_items : "Predmeti sa eventa",
 			known_scroll : "Već ste naučili sadržaj ovog svitka",
 			unknown_scroll : "Nemate naučen ovaj svitak",
 			advance_filters : "Napredni filteri",
-			advance_filters_apply : "Primeni filtere",
-			advance_filters_clear : "Skloni filtere",
-			advance_filters_found : "(found {{items}})"
+			advance_filters_apply : "Primjeni filtere",
+			advance_filters_clear : "Očisti filtere",
+			advance_filters_found : "(pronađeni {{items}})"
 		},
 
+		// Report
+		reports : {
+			avg_damage : "Prosječna šteta",
+			avg_heal : "Prosječno ozdravljenje",
+			total_hits : "Ukuno udaraca",
+			hits : "Udarci",
+			dodge : "Izbjegnuti ili Blokirani",
+			points : "Bodovi"
+		},
+		
 		// Cross-Browser Sync
 		sync : {
-			are_you_sure : "Are you sure you want to login as the player {{name}}?",
-			gladiatus_crazy_addon_dependency : "You must have Gladiatus Crazy Addon installed on the other browser.",
-			how_to_sync_info : "Copy the url and paste it on the other browser, or scan the qrcode."
+			are_you_sure : "Jeste li sigurni da se želite prijaviti kao igrač {{name}}?",
+			gladiatus_crazy_addon_dependency : "Morate imati instaliran Gladiatus Crazy Addon na drugom pregledniku.",
+			how_to_sync_info : "Kopirajte URL i zalijepite ga na drugi preglednik ili skenirajte qrcode."
 		},
 
 		// Settings
@@ -255,7 +285,7 @@ gca_languages['hr'] = {
 			category_expedition : "Ekspedicije",
 			category_guild : "Savez",
 			category_auction : "Aukcija",
-			category_events : "Eventovi",
+			category_events : "Eventi",
 			category_sound : "Zvukovi",
 			category_data : "Podaci",
 
@@ -264,50 +294,54 @@ gca_languages['hr'] = {
 			category_global$sound_notifications : "Uključi zvučne notifikacije",
 			category_global$browser_notifications : "Uključi browser notifikacije",
 			category_global$extended_hp_xp_info : "Prikaži prošireno HP i XP zaglavlje",
-			category_global$extended_hp_xp_info_potion : "Prikaži ikonicu za korišćenje napitka Života",
+			category_global$extended_hp_xp_info_potion : "Prikaži ikonicu za korištenje napitka Života",
 			category_global$hp_timer_for_full_life : "Prikaži preostale minute do regeneracije svih životnih bodova",
 			category_global$expedition_dungeon_points_recover_timer : "Prikaži minute do regeneracije svih bodova za ekspedicije/tamnice",
-			category_global$shortcuts_bar : "Uključi bar za prečice",
-			category_global$shortcuts_bar_buttons : "Odaberite prečice za prikaz na baru za prečice",
-			category_global$auction_status_bar : "Prikaži bar za status aukcije",
-			category_global$auction_status_notification : "Obavijest pri promeni statusa aukcije",
-			category_global$top_fixed_bar : "Uključi gornji fiksirani bar",
+			category_global$shortcuts_bar : "Uključi izbornik za prečice",
+			category_global$shortcuts_bar_buttons : "Odaberite prečice za prikaz na izborniku za prečice",
+			category_global$auction_status_bar : "Prikaži status aukcije",
+			category_global$auction_status_notification : "Obavijest pri promjeni statusa aukcije",
+			category_global$top_fixed_bar : "Uključi gornji fiksirani izbornik",
 			category_global$advance_main_menu : "Poboljšaj glavni meni",
-			category_global$submenu_click_to_change : "Promena pod-menija na klik",
-			category_global$remember_tabs : "Zapamti aktivni prozor kod prodavca",
+			category_global$submenu_click_to_change : "Promjena pod-menija na klik",
+			category_global$remember_tabs : "Zapamti aktivni prozor kod trgovca",
 			category_global$attacked_timers : "Prikaži tajmere za napade",
 			category_global$quest_timer : "Prikaži status zadataka ili tajmer",
-			category_global$merchants_timer : "Prikaži vremenski indikator kod prodavca",
+			category_global$merchants_timer : "Prikaži vremenski indikator kod trgovca",
 			category_global$forge_timers : "Prikaži indikator vremena kod kovačnice/talioničara",
 			category_global$cooldown_sound_notifications : "Uključi zvučne notifikacije za hlađenje (ekspedicije, tamnica, arena)",
 			category_global$notify_new_guild_application : "Obavijesti me kada ima nova savezna aplikacija",
-			category_global$notify_new_guild_application_interval : "Proveravaj za novu saveznu aplikaciju svakih (minuta)",
+			category_global$notify_new_guild_application_interval : "Provjeravaj za novu saveznu aplikaciju svakih (minuta)",
+			category_global$notify_guild_attack_ready : "Obavijesti me kada istekne hlađenje za novi savezni napad",
+			category_global$notify_guild_attack_ready_interval : "Provjeri hlađenje za savezni napad svakih (minuta)",
 			category_global$x_scroll : "Uključi gladiatusov horizontalni scroll",
-			category_global$item_shadow : "Uključi senke predmeta",
+			category_global$item_shadow : "Uključi sjene predmeta",
 			category_global$inventory_options_group : "Grupne postavke inventara",
-			category_global$inventory_gold_info : "Prikaži vrednost predmeta u zlatu na trenutnoj torbi",
-			category_global$pagination_layout : "Change pages-box's layout",
+			category_global$inventory_gold_info : "Prikaži vrijednost predmeta u zlatu na trenutnoj torbi",
+			category_global$pagination_layout : "Promijeni raspored paketa",
 			category_global$gold_exp_data : "Prikaži podatke za zlato i iskustvo",
 			category_global$pray_shorcut : "Prikaži prečicu za molitvu unutar Podzemlja",
 			category_global$centurio_powerups_timers : "Prikaži trajanje Centuriona i Paktova na Premium dugmetu",
-			category_global$show_durability : "Prikaži održavanje predmeta u donjem levom uglu predmeta",
-			category_global$min_durability : "Notifikacija za predmete sa održavanjem+izdržljivosti ispod _% (pomeriti na 0 da bi isključili)",
-			category_global$show_forge_info : "Prikaži resurse za popravku u informacijama predmeta",
+			category_global$show_durability : "Prikaži održavanje predmeta u donjem lijevom uglu predmeta",
+			category_global$min_durability : "Notifikacija za predmete sa održavanjem+izdržljivosti ispod _% (pomaknuti na 0 da bi isključili)",
+			category_global$show_forge_info : "Prikaži resurse za popravak u informacijama predmeta",
+			category_global$show_mercenaries_real_name : "Prikaži plačenička prava imena (tip) u opisu",
+			category_global$global_arena_timer : "Prikaži tajmer globalne arene",
 			// Settings - Overview
 			category_overview$analyze_items : "Analiziraj statove predmeta (potrebno radi treniranja)",
 			category_overview$food_life_gain : "Prikaži koliko životnih bodova hrana daje",
-			category_overview$block_avoid_caps : "Show block and Avoid caps",
+			category_overview$block_avoid_caps : "Pokaži blok i izbjegavaj maksimum",
 			category_overview$best_food : "Označi najefikasniju hranu",
-			category_overview$overfeed_food : "Izbledi hranu koja će vas previše izlečiti",
+			category_overview$overfeed_food : "Izblijedi hranu koja će vas previše izliječiti",
 			category_overview$double_click_consume : "Klikni dva puta na predmet da ga iskoristiš",
-			category_overview$daily_bonus_log : "Izveštaj o dnevnom login bonusu",
+			category_overview$daily_bonus_log : "Izvještaj o dnevnom login bonusu",
 			category_overview$buffs_detailed_time : "Prikaži detaljne tajmere na saveznim pojačanjima",
 			category_overview$mercenaries_manager : "Prikaži menadžment za plaćenike",
 			category_overview$mercenary_tooltip_show : "Prikaži statove plaćenika",
 			category_overview$more_statistics : "Prikaži više statova na dugmetu za statistike",
 			category_overview$achivements_layout : "Poboljšaj izgleda prozora sa Pobjedama ",
 			category_overview$costumes_layout : "Poboljšaj izgled prozora sa Kostimima",
-			category_overview$items_repair_overview : "Show needed-materials-to-repair box",
+			category_overview$items_repair_overview : "Pokaži potrebne-materijale-za-popravak",
 			// Settings - Messages
 			category_messages$messages_layout : "Poboljšaj izgled poruka",
 			category_messages$show_unread : "Označi nepročitane poruke",
@@ -315,10 +349,10 @@ gca_languages['hr'] = {
 			category_messages$send_message_box : "Uključi kutiju za slanje poruke",
 			category_messages$more_guild_mate_info : "Prikaži više informacija o saveznicima",
 			category_messages$show_message_links : "Prikaži linkove unutar poruka",
-			category_messages$get_guild_battle_info : "Automatski ucitaj rezultate saveznih borbi",
+			category_messages$get_guild_battle_info : "Automatski učitaj rezultate saveznih borbi",
 			category_messages$show_sidebar : "Prikaži sidebar za poruke",
 			category_messages$fix_header_links : "Popravi bag sa linkovima unutar Predmeta poruke",
-			category_messages$new_message_focus : "Fokus na telo poruke",
+			category_messages$new_message_focus : "Fokus na tijelo poruke",
 			category_messages$new_message_friend_list : "Uključi odabir prijatelja iz dugmeta za Listu prijatelja",
 			// Settings - Packages
 			category_packages$filters_layout : "Poboljšaj izgled filtera",
@@ -327,7 +361,7 @@ gca_languages['hr'] = {
 			category_packages$small_items_layout : "Smanji izgled predmeta u veličini unutar paketa",
 			category_packages$load_more_pages : "Učitaj više stranica",
 			category_packages$pages_to_load : "Broj stranica za učitavanje",
-			category_packages$item_price : "Prikaži cenu predmeta",
+			category_packages$item_price : "Prikaži cijenu predmeta",
 			category_packages$special_category_features : "Uključi specijalne opcije po kategoriji",
 			category_packages$double_click_open : "Klikni dva puta na paket da ga otvoriš",
 			category_packages$advance_filter : "Napredni filteri za pakete",
@@ -335,9 +369,9 @@ gca_languages['hr'] = {
 			category_pantheon$quests_reorder : "Sortiraj zadatke po grupi",
 			category_pantheon$quests_detailed_rewards : "Prikaži detaljnije nagradu za zadatak",
 			category_pantheon$missions_show_completed : "Prikaži završene zadatke",
-			category_pantheon$gods_show_points_percent : "Prikaži procenat milosti za bogove",
+			category_pantheon$gods_show_points_percent : "Prikaži postotak milosti za bogove",
 			category_pantheon$open_many_mysteryboxes : "Otvori više Kovčega Božanske sudbine",
-			category_pantheon$show_mysterybox_rewards_rubies : "Prikaži vrednost nagrada unutar Kovčega Božanske sudbine u rubinima",
+			category_pantheon$show_mysterybox_rewards_rubies : "Prikaži vrijednost nagrada unutar Kovčega Božanske sudbine u rubinima",
 			category_pantheon$show_mysterybox_rewards_owned : "Prikaži broj vlastitih nagrada unutar Kočega Božanske sudbine",
 			// Settings - Reports
 			category_reports$style_change : "Poboljšaj izgled liste izveštaja",
@@ -346,15 +380,15 @@ gca_languages['hr'] = {
 			category_reports$battle_analyzer : "Analiziraj izveštaje i prikaži statistike o životnim bodovima",
 			// Settings - Training
 			category_training$show_discount : "Prikaži popust za treniranje",
-			category_training$show_basics_in_bars : "Prikazi temeljne unutar barova",
+			category_training$show_basics_in_bars : "Prikaži temeljne unutar barova",
 			category_training$multiple_train : "Uključi višestruko treniranje odjednom",
 			category_training$calculator_train : "Uključi kalkulator za cenu treniranja",
 			category_training$show_analyze_items_data : "Prikaži analizirane podatke o predmetima unutar tooltipa",
-			category_training$show_points_after_upgrade : "Prikaži vrednost temeljnih nakog poboljšanja",
+			category_training$show_points_after_upgrade : "Prikaži vrijednost temeljnih nakog poboljšanja",
 			// Settings - Merchants
-			category_merchants$fade_unaffordable_items : "Izbledi predmete koje ne možete kupiti",
-			category_merchants$show_shop_info : "Prikaži informacije o prodavcu (ukupno zlata i rubina)",
-			category_merchants$double_click_actions : "Dvoklik na predmete da ih kupimo/prodamo",
+			category_merchants$fade_unaffordable_items : "Izlijedi predmete koje ne možete kupiti",
+			category_merchants$show_shop_info : "Prikaži informacije o trgovcu (ukupno zlata i rubina)",
+			category_merchants$double_click_actions : "Dvaput kliknite predmet za prodaju / kupnju",
 			// Settings - Forge
 			category_forge$material_links : "[Kovačnica/Radni stol] Prikaži prečice za pakete i market za svaki potreban materijal",
 			category_forge$show_levels : "[Kovačnica] Prikaži Prefix/Sufix/Osnovu nivo predmeta pored naziva",
@@ -362,33 +396,35 @@ gca_languages['hr'] = {
 			category_forge$horreum_remember_options : "[Horreum] Zapamti podešavanja za pohranjivanje resursa unutar horreuma",
 			category_forge$horreum_select_meterials : "[Horreum] Odaberi materijal na klik",
 			// Settings - Arena
-			category_arena$ignore_attack_confirmations : "Ignoriši obavijest o višestrukom napadu (poruka kada pokušamo da napadnemo istog igrača više od 5 puta)",
+			category_arena$ignore_attack_confirmations : "Ignoriraj obavijest o višestrukom napadu (poruka kada pokušamo napasti istog igrača više od 5 puta)",
 			category_arena$show_simulator_imagelink : "Prikaži an sliku sa linkom do simulatora (simulator.dinodevs.com)",
 			category_arena$sort_by_lvl : "Prikaži protivnike u areni po levelu",
 			category_arena$highlight_guild_members : "Označi igrače na drugim serverima koji su možda saveznici",
-			category_arena$target_list : "Players target list",
+			category_arena$target_list : "Popis meta/igrača",
 			// Settings - Magus
-			category_magus$fade_unimprovable_items : "Izbledi predmete koje ne možete poboljšati unutura Magusa",
+			category_magus$fade_unimprovable_items : "Izblijedi predmete koje ne možete poboljšati unutura Magusa",
 			// Settings - Market
 			category_market$soulbound_warning : "Potvrda prilikom kupovine predmeta povezanog dušom",
 			category_market$one_gold_warning : "Potvrda prilikom kupovine predmeta koji košta 1 zlatnik",
-			category_market$cancel_all_button : "Prikaži otkaži-sve dugme",
+			category_market$cancel_all_button : "Prikaži otkaži-sve gumb",
 			category_market$remember_sell_duration : "Zapamti prethodno odabrano trajanje za prodaju",
 			category_market$sell_duration : "Odaberi default dužinu prodaje",
 			category_market$one_gold_mode : "Dugme za Uključi/Isključi prodaju predmeta za uvek 1 zlatnik",
 			category_market$remember_sort : "Zapamti raspored poslednjeg sortiranja",
-			category_market$double_click_select : "Selektuj predmete dvoklikom",
+			category_market$double_click_select : "Odaberi predmete duplim klikom",
 			category_market$sell_warning_icons : "Ikonica za upozorenje prilikom prodaje predmeta",
+			category_market$sell_with_enter : "Prodaje predmete pritiskom tipke enter ⏎",
 			// Settings - Expedition
 			category_expedition$show_enemy_drops : "Prikaži materijale koji svaki neprijatelj može da baci",
 			category_expedition$underworld_layout : "Prikaži  izgled menija neprijatelja unutar Podzemlja nalik na ekspedicije",
 			// Settings - Guild
 			category_guild$jail_layout : "Poboljšaj izgled Negotijuma",
 			category_guild$library_layout : "Poboljšaj izgled knjižnice",
-			category_guild$library_fade_non_scrolls : "Izbledi predmete koji nisu recepti unutar knjižnice",
-			category_guild$library_tooltip_data : "Add more data on library's tooltips",
+			category_guild$library_fade_non_scrolls : "Izblijedi predmete koji nisu recepti unutar knjižnice",
+			category_guild$library_tooltip_data : "Dodajte više podataka opisima recepata knjižnice",
 			category_guild$bank_donate_layout : "Poboljšaj izgled banke pri doniranju",
 			category_guild$bank_book_layout : "Poboljšaj izgled knjige saveznih donacija",
+			category_guild$bank_book_show_changes : "Prikažite varijacije donacija od posljednjeg posjeta knjizi banke",
 			category_guild$medic_layout : "Poboljšaj izgled saveznog doktora",
 			// Settings - Auction
 			category_auction$items_counters : "Prebroj predmete i broj ponuda",
@@ -401,7 +437,7 @@ gca_languages['hr'] = {
 			category_auction$save_last_state : "Implementiraj čuvanje poslednje pretrage po aukciji i učitaj je",
 			// Settings - Events
 			category_events$craps_timer : "Prikaži tajmer za kockice eventa",
-			category_events$server_quest_timer : "Display server-quest or location event's timer on top",
+			category_events$server_quest_timer : "Prikaži poslužitelj-zadatak ili lokaciju eventa tajmera na vrhu",
 			// Settings - Sound
 			category_sound$enabled : "Uključi zvučni sistem",
 			category_sound$muted : "Mutiraj/Unmutiraj zvukove",
@@ -411,29 +447,34 @@ gca_languages['hr'] = {
 			category_data$import_settings : "Importuj podešavanja iz fajla",
 			category_data$reset_settings : "Resetuj podešavanja addona",
 			category_data$clear_data : "Obriši sve podatke addona",
-			category_data$cross_browser_login : "Cross browser login sync",
+			category_data$clear_cache_data : "Očistite podatke o predmemoriranju Addona",
+			category_data$cross_browser_login : "Sinkronizacija prijave na drugim preglednicima",
+			category_data$export_error_player_settings : "Izvezi podatke o postavkama pogreške korisnika u datoteku",
 
 			// Buttons
 			save : "Sačuvaj",
-			export : "Export",
-			import : "Import",
-			reset : "Resetuj",
+			export : "Izvoz",
+			import : "Uvoz",
+			reset : "Resetiraj",
 			clear : "Obriši",
 			do_not_show : "Ne prikazuj",
 			show_as : "Prikaži kao",
 			show_info : "Pokaži informacije",
+			each_category : "Pokreni na ciljanoj kategoriji",
+			all_category : "Pokreni na kategoriji mete & sve",
+			do_not_run : "Nemoj pokrenuti",
 
 			// Info
 			translated_percent : "Preveden postotak: {{number}}%",
 			translated_by : "Prevedeno od strane: {{string}}",
-			reset_settings_confirm : "Da li ste sigurni da želite da resetujete podešavanja addona?",
+			reset_settings_confirm : "Da li ste sigurni da želite da resetirate podešavanja addona?",
 			clear_data_confirm : "Da li ste sigurni da želite da obrišete prikupljene podatke addona?",
-			data_exported_save_the_file : "Data were exported. Save the file.",
+			data_exported_save_the_file : "Podaci su izvezeni. Spremite datoteku.",
+			missing_translations : "Prijevodi koji nedostaju",
 
 			// Notifications
-			notification_reload : "Osvežite stranicu da primenite promene",
+			notification_reload : "Osvježite stranicu da primjenite promjene",
 		}
 	}
 }
-
 gca_languages._active = "hr";
